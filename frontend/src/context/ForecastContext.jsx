@@ -84,6 +84,10 @@ export function ForecastProvider({ children }) {
         const decoder = new TextDecoder()
         let buffer = ''
         let finalResult = null
+        // Throughput is measured from the first progress event so the one-off
+        // startup latency (cold start, model load) doesn't inflate the estimate.
+        let calibAt = 0
+        let calibDone = 0
 
         // eslint-disable-next-line no-constant-condition
         while (true) {
@@ -100,6 +104,18 @@ export function ForecastProvider({ children }) {
             const msg = JSON.parse(json)
             if (msg.type === 'progress') {
               setProgress({ done: msg.done, total: msg.total })
+              // Anchor calibration at the first progress event (skips startup latency).
+              if (calibAt === 0) {
+                calibAt = Date.now()
+                calibDone = msg.done
+              } else if (msg.done > calibDone + 2) {
+                // Steady-state cost per run, measured since the anchor.
+                const live = (Date.now() - calibAt) / (msg.done - calibDone)
+                const clamped = Math.min(Math.max(live, MIN_MS_PER_RUN), MAX_MS_PER_RUN)
+                msPerRun.current = clamped
+                localStorage.setItem(CALIB_KEY, String(clamped))
+                setEtaMs(clamped * safeRuns)
+              }
             } else if (msg.type === 'result') {
               finalResult = msg.result
             }
@@ -109,11 +125,13 @@ export function ForecastProvider({ children }) {
         if (finalResult) {
           setData(finalResult)
           setProgress({ done: safeRuns, total: safeRuns })
-          // Refine the per-run cost estimate with an exponential moving average.
-          const actual = (Date.now() - begin) / safeRuns
-          const blended = msPerRun.current * 0.6 + actual * 0.4
-          msPerRun.current = Math.min(Math.max(blended, MIN_MS_PER_RUN), MAX_MS_PER_RUN)
-          localStorage.setItem(CALIB_KEY, String(msPerRun.current))
+          // Persist the steady-state per-run cost (excludes startup latency).
+          if (calibAt > 0 && safeRuns > calibDone) {
+            const actual = (Date.now() - calibAt) / (safeRuns - calibDone)
+            const clamped = Math.min(Math.max(actual, MIN_MS_PER_RUN), MAX_MS_PER_RUN)
+            msPerRun.current = clamped
+            localStorage.setItem(CALIB_KEY, String(clamped))
+          }
         }
       } catch (err) {
         // Cancelled requests are not errors.
