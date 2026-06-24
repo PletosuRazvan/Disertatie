@@ -189,6 +189,12 @@
     padding-bottom: 0;
     text-align: center;
   }
+  .selectGroup { min-width: 0; }
+  .selectGroup select,
+  .selectGroup :global(.form-control) {
+    width: 100%;
+    min-width: 0;
+  }
 
   .resultHeader {
     grid-template-columns: 1fr;
