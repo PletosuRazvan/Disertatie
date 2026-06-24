@@ -196,8 +196,14 @@ def simulate_batch_stream():
 
         yield json.dumps({"type": "result", "result": result}) + "\n"
 
-    return Response(stream_with_context(generate()),
-                    mimetype="application/x-ndjson")
+    return Response(
+        stream_with_context(generate()),
+        mimetype="application/x-ndjson",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",
+        },
+    )
 
 
 @predictions_bp.post("/predict")
