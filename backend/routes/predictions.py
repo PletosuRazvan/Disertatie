@@ -171,7 +171,7 @@ def simulate_batch_stream():
     def generate():
         # Large initial comment defeats byte-threshold buffering in proxies/CDNs
         # (Cloudflare/Render) so progress events flush immediately.
-        yield ": " + (" " * 2048) + "\n\n"
+        yield ": " + ("x" * 8192) + "\n\n"
 
         result = None
         for kind, payload in predictor.iter_simulate_batch(
@@ -207,8 +207,9 @@ def simulate_batch_stream():
         stream_with_context(generate()),
         mimetype="text/event-stream",
         headers={
-            "Cache-Control": "no-cache",
+            "Cache-Control": "no-cache, no-transform",
             "X-Accel-Buffering": "no",
+            "Content-Encoding": "identity",
             "Connection": "keep-alive",
         },
     )
