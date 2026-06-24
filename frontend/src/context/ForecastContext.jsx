@@ -94,8 +94,10 @@ export function ForecastProvider({ children }) {
           while ((nl = buffer.indexOf('\n')) >= 0) {
             const line = buffer.slice(0, nl).trim()
             buffer = buffer.slice(nl + 1)
-            if (!line) continue
-            const msg = JSON.parse(line)
+            if (!line || line.startsWith(':')) continue
+            const json = line.startsWith('data:') ? line.slice(5).trim() : line
+            if (!json) continue
+            const msg = JSON.parse(json)
             if (msg.type === 'progress') {
               setProgress({ done: msg.done, total: msg.total })
             } else if (msg.type === 'result') {

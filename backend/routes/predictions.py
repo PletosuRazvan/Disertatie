@@ -165,13 +165,20 @@ def simulate_batch_stream():
     # ~100 progress updates regardless of run count.
     every = max(1, runs // 100)
 
+    def sse(obj):
+        return f"data: {json.dumps(obj)}\n\n"
+
     def generate():
+        # Large initial comment defeats byte-threshold buffering in proxies/CDNs
+        # (Cloudflare/Render) so progress events flush immediately.
+        yield ": " + (" " * 2048) + "\n\n"
+
         result = None
         for kind, payload in predictor.iter_simulate_batch(
             season=season, runs=runs, seed=seed, progress_every=every
         ):
             if kind == "progress":
-                yield json.dumps({"type": "progress", "done": payload, "total": runs}) + "\n"
+                yield sse({"type": "progress", "done": payload, "total": runs})
             else:
                 result = payload
 
@@ -194,14 +201,15 @@ def simulate_batch_stream():
                 "timestamp": datetime.now(timezone.utc),
             })
 
-        yield json.dumps({"type": "result", "result": result}) + "\n"
+        yield sse({"type": "result", "result": result})
 
     return Response(
         stream_with_context(generate()),
-        mimetype="application/x-ndjson",
+        mimetype="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
             "X-Accel-Buffering": "no",
+            "Connection": "keep-alive",
         },
     )
 
