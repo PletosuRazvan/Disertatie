@@ -3,7 +3,8 @@ from datetime import timedelta
 
 from dotenv import load_dotenv
 
-load_dotenv()
+# Always load backend/.env regardless of the current working directory.
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 class Config:
     # MongoDB
