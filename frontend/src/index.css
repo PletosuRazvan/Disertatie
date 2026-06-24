@@ -143,3 +143,21 @@ tbody td { padding: .7rem 1rem; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
+
+/* ── Mobile ──────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding: calc(var(--nav-h) + 1.25rem) 1rem 2.5rem;
+  }
+  .page-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
+  }
+  .btn {
+    padding: .55rem 1rem;
+    font-size: .88rem;
+  }
+  table { font-size: .85rem; }
+  thead th { padding: .7rem .65rem; }
+  tbody td { padding: .6rem .65rem; }
+}

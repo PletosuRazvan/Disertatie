@@ -176,3 +176,37 @@
   margin-top: .4rem;
   line-height: 1.5;
 }
+
+@media (max-width: 640px) {
+  .predictForm,
+  .resultCard { padding: 1.1rem; }
+
+  .selectRow {
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+  .vsLabel {
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .resultHeader {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: .4rem;
+  }
+  .resultHeader .resultTeam:last-child { text-align: center; }
+  .resultScore { font-size: 1.6rem; }
+
+  .barRow {
+    grid-template-columns: 90px 1fr 44px;
+    gap: .5rem;
+    font-size: .8rem;
+  }
+
+  .matchRow {
+    grid-template-columns: 1fr 56px 16px 56px 1fr;
+    gap: .4rem;
+  }
+  .teamName { font-size: .85rem; }
+}
