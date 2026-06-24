@@ -1,27 +1,53 @@
 # ── Python ──
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
+*.so
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
 backend/venv/
 venv/
 .venv/
+env/
 
 # ── Secrets / env ──
 .env
 *.env
+.env.local
+.env.*.local
 !*.env.example
 backend/.env
 
 # ── Node / frontend ──
 node_modules/
 frontend/dist/
+frontend/node_modules/
 dist/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # ── Editor / OS ──
 .vscode/
+.idea/
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# ── Logs / temp ──
+*.log
+*.tmp
+*.bak
+*.cache
 
 # ── Archives / misc ──
 *.zip
@@ -30,10 +56,10 @@ Thumbs.db
 Disertatie/
 General/
 my_thesis/
+feedback.txt
 
 # ── LaTeX build artifacts ──
 *.aux
-*.log
 *.out
 *.toc
 *.synctex.gz
