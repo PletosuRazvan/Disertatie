@@ -1,0 +1,1905 @@
+{
+  "season": "2026/27",
+  "fixtures": [
+    {
+      "round": 1,
+      "home": "Arsenal",
+      "away": "Coventry"
+    },
+    {
+      "round": 1,
+      "home": "Hull",
+      "away": "Man United"
+    },
+    {
+      "round": 1,
+      "home": "Everton",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 1,
+      "home": "Ipswich",
+      "away": "Sunderland"
+    },
+    {
+      "round": 1,
+      "home": "Nott'm Forest",
+      "away": "Leeds"
+    },
+    {
+      "round": 1,
+      "home": "Brentford",
+      "away": "Tottenham"
+    },
+    {
+      "round": 1,
+      "home": "Brighton",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 1,
+      "home": "Man City",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 1,
+      "home": "Newcastle",
+      "away": "Liverpool"
+    },
+    {
+      "round": 1,
+      "home": "Fulham",
+      "away": "Chelsea"
+    },
+    {
+      "round": 2,
+      "home": "Bournemouth",
+      "away": "Everton"
+    },
+    {
+      "round": 2,
+      "home": "Aston Villa",
+      "away": "Arsenal"
+    },
+    {
+      "round": 2,
+      "home": "Chelsea",
+      "away": "Brighton"
+    },
+    {
+      "round": 2,
+      "home": "Coventry",
+      "away": "Hull"
+    },
+    {
+      "round": 2,
+      "home": "Crystal Palace",
+      "away": "Man City"
+    },
+    {
+      "round": 2,
+      "home": "Leeds",
+      "away": "Brentford"
+    },
+    {
+      "round": 2,
+      "home": "Liverpool",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 2,
+      "home": "Man United",
+      "away": "Ipswich"
+    },
+    {
+      "round": 2,
+      "home": "Sunderland",
+      "away": "Fulham"
+    },
+    {
+      "round": 2,
+      "home": "Tottenham",
+      "away": "Newcastle"
+    },
+    {
+      "round": 3,
+      "home": "Arsenal",
+      "away": "Chelsea"
+    },
+    {
+      "round": 3,
+      "home": "Brentford",
+      "away": "Sunderland"
+    },
+    {
+      "round": 3,
+      "home": "Brighton",
+      "away": "Leeds"
+    },
+    {
+      "round": 3,
+      "home": "Everton",
+      "away": "Man United"
+    },
+    {
+      "round": 3,
+      "home": "Fulham",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 3,
+      "home": "Hull",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 3,
+      "home": "Ipswich",
+      "away": "Liverpool"
+    },
+    {
+      "round": 3,
+      "home": "Man City",
+      "away": "Coventry"
+    },
+    {
+      "round": 3,
+      "home": "Newcastle",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 3,
+      "home": "Nott'm Forest",
+      "away": "Tottenham"
+    },
+    {
+      "round": 4,
+      "home": "Bournemouth",
+      "away": "Brentford"
+    },
+    {
+      "round": 4,
+      "home": "Aston Villa",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 4,
+      "home": "Chelsea",
+      "away": "Hull"
+    },
+    {
+      "round": 4,
+      "home": "Coventry",
+      "away": "Brighton"
+    },
+    {
+      "round": 4,
+      "home": "Crystal Palace",
+      "away": "Ipswich"
+    },
+    {
+      "round": 4,
+      "home": "Leeds",
+      "away": "Newcastle"
+    },
+    {
+      "round": 4,
+      "home": "Liverpool",
+      "away": "Fulham"
+    },
+    {
+      "round": 4,
+      "home": "Man United",
+      "away": "Man City"
+    },
+    {
+      "round": 4,
+      "home": "Sunderland",
+      "away": "Arsenal"
+    },
+    {
+      "round": 4,
+      "home": "Tottenham",
+      "away": "Everton"
+    },
+    {
+      "round": 5,
+      "home": "Bournemouth",
+      "away": "Liverpool"
+    },
+    {
+      "round": 5,
+      "home": "Brentford",
+      "away": "Chelsea"
+    },
+    {
+      "round": 5,
+      "home": "Brighton",
+      "away": "Arsenal"
+    },
+    {
+      "round": 5,
+      "home": "Everton",
+      "away": "Ipswich"
+    },
+    {
+      "round": 5,
+      "home": "Fulham",
+      "away": "Man United"
+    },
+    {
+      "round": 5,
+      "home": "Leeds",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 5,
+      "home": "Man City",
+      "away": "Sunderland"
+    },
+    {
+      "round": 5,
+      "home": "Newcastle",
+      "away": "Hull"
+    },
+    {
+      "round": 5,
+      "home": "Nott'm Forest",
+      "away": "Coventry"
+    },
+    {
+      "round": 5,
+      "home": "Tottenham",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 6,
+      "home": "Arsenal",
+      "away": "Leeds"
+    },
+    {
+      "round": 6,
+      "home": "Aston Villa",
+      "away": "Brentford"
+    },
+    {
+      "round": 6,
+      "home": "Chelsea",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 6,
+      "home": "Coventry",
+      "away": "Newcastle"
+    },
+    {
+      "round": 6,
+      "home": "Crystal Palace",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 6,
+      "home": "Hull",
+      "away": "Everton"
+    },
+    {
+      "round": 6,
+      "home": "Ipswich",
+      "away": "Fulham"
+    },
+    {
+      "round": 6,
+      "home": "Liverpool",
+      "away": "Man City"
+    },
+    {
+      "round": 6,
+      "home": "Man United",
+      "away": "Tottenham"
+    },
+    {
+      "round": 6,
+      "home": "Sunderland",
+      "away": "Brighton"
+    },
+    {
+      "round": 7,
+      "home": "Bournemouth",
+      "away": "Sunderland"
+    },
+    {
+      "round": 7,
+      "home": "Brentford",
+      "away": "Liverpool"
+    },
+    {
+      "round": 7,
+      "home": "Brighton",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 7,
+      "home": "Everton",
+      "away": "Chelsea"
+    },
+    {
+      "round": 7,
+      "home": "Fulham",
+      "away": "Hull"
+    },
+    {
+      "round": 7,
+      "home": "Leeds",
+      "away": "Man United"
+    },
+    {
+      "round": 7,
+      "home": "Man City",
+      "away": "Ipswich"
+    },
+    {
+      "round": 7,
+      "home": "Newcastle",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 7,
+      "home": "Nott'm Forest",
+      "away": "Arsenal"
+    },
+    {
+      "round": 7,
+      "home": "Tottenham",
+      "away": "Coventry"
+    },
+    {
+      "round": 8,
+      "home": "Arsenal",
+      "away": "Everton"
+    },
+    {
+      "round": 8,
+      "home": "Aston Villa",
+      "away": "Man City"
+    },
+    {
+      "round": 8,
+      "home": "Chelsea",
+      "away": "Tottenham"
+    },
+    {
+      "round": 8,
+      "home": "Coventry",
+      "away": "Fulham"
+    },
+    {
+      "round": 8,
+      "home": "Crystal Palace",
+      "away": "Newcastle"
+    },
+    {
+      "round": 8,
+      "home": "Hull",
+      "away": "Brentford"
+    },
+    {
+      "round": 8,
+      "home": "Ipswich",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 8,
+      "home": "Liverpool",
+      "away": "Brighton"
+    },
+    {
+      "round": 8,
+      "home": "Man United",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 8,
+      "home": "Sunderland",
+      "away": "Leeds"
+    },
+    {
+      "round": 9,
+      "home": "Bournemouth",
+      "away": "Leeds"
+    },
+    {
+      "round": 9,
+      "home": "Aston Villa",
+      "away": "Fulham"
+    },
+    {
+      "round": 9,
+      "home": "Brentford",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 9,
+      "home": "Chelsea",
+      "away": "Man United"
+    },
+    {
+      "round": 9,
+      "home": "Coventry",
+      "away": "Sunderland"
+    },
+    {
+      "round": 9,
+      "home": "Hull",
+      "away": "Ipswich"
+    },
+    {
+      "round": 9,
+      "home": "Liverpool",
+      "away": "Arsenal"
+    },
+    {
+      "round": 9,
+      "home": "Man City",
+      "away": "Brighton"
+    },
+    {
+      "round": 9,
+      "home": "Newcastle",
+      "away": "Everton"
+    },
+    {
+      "round": 9,
+      "home": "Tottenham",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 10,
+      "home": "Arsenal",
+      "away": "Hull"
+    },
+    {
+      "round": 10,
+      "home": "Brighton",
+      "away": "Brentford"
+    },
+    {
+      "round": 10,
+      "home": "Crystal Palace",
+      "away": "Liverpool"
+    },
+    {
+      "round": 10,
+      "home": "Everton",
+      "away": "Coventry"
+    },
+    {
+      "round": 10,
+      "home": "Fulham",
+      "away": "Newcastle"
+    },
+    {
+      "round": 10,
+      "home": "Ipswich",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 10,
+      "home": "Leeds",
+      "away": "Tottenham"
+    },
+    {
+      "round": 10,
+      "home": "Man United",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 10,
+      "home": "Nott'm Forest",
+      "away": "Man City"
+    },
+    {
+      "round": 10,
+      "home": "Sunderland",
+      "away": "Chelsea"
+    },
+    {
+      "round": 11,
+      "home": "Bournemouth",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 11,
+      "home": "Aston Villa",
+      "away": "Sunderland"
+    },
+    {
+      "round": 11,
+      "home": "Brentford",
+      "away": "Everton"
+    },
+    {
+      "round": 11,
+      "home": "Chelsea",
+      "away": "Leeds"
+    },
+    {
+      "round": 11,
+      "home": "Coventry",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 11,
+      "home": "Hull",
+      "away": "Brighton"
+    },
+    {
+      "round": 11,
+      "home": "Liverpool",
+      "away": "Man United"
+    },
+    {
+      "round": 11,
+      "home": "Man City",
+      "away": "Fulham"
+    },
+    {
+      "round": 11,
+      "home": "Newcastle",
+      "away": "Arsenal"
+    },
+    {
+      "round": 11,
+      "home": "Tottenham",
+      "away": "Ipswich"
+    },
+    {
+      "round": 12,
+      "home": "Arsenal",
+      "away": "Man City"
+    },
+    {
+      "round": 12,
+      "home": "Brighton",
+      "away": "Newcastle"
+    },
+    {
+      "round": 12,
+      "home": "Crystal Palace",
+      "away": "Hull"
+    },
+    {
+      "round": 12,
+      "home": "Everton",
+      "away": "Liverpool"
+    },
+    {
+      "round": 12,
+      "home": "Fulham",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 12,
+      "home": "Ipswich",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 12,
+      "home": "Leeds",
+      "away": "Coventry"
+    },
+    {
+      "round": 12,
+      "home": "Man United",
+      "away": "Brentford"
+    },
+    {
+      "round": 12,
+      "home": "Nott'm Forest",
+      "away": "Chelsea"
+    },
+    {
+      "round": 12,
+      "home": "Sunderland",
+      "away": "Tottenham"
+    },
+    {
+      "round": 13,
+      "home": "Bournemouth",
+      "away": "Brighton"
+    },
+    {
+      "round": 13,
+      "home": "Aston Villa",
+      "away": "Everton"
+    },
+    {
+      "round": 13,
+      "home": "Brentford",
+      "away": "Arsenal"
+    },
+    {
+      "round": 13,
+      "home": "Chelsea",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 13,
+      "home": "Coventry",
+      "away": "Ipswich"
+    },
+    {
+      "round": 13,
+      "home": "Hull",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 13,
+      "home": "Liverpool",
+      "away": "Sunderland"
+    },
+    {
+      "round": 13,
+      "home": "Man City",
+      "away": "Leeds"
+    },
+    {
+      "round": 13,
+      "home": "Newcastle",
+      "away": "Man United"
+    },
+    {
+      "round": 13,
+      "home": "Tottenham",
+      "away": "Fulham"
+    },
+    {
+      "round": 14,
+      "home": "Bournemouth",
+      "away": "Hull"
+    },
+    {
+      "round": 14,
+      "home": "Aston Villa",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 14,
+      "home": "Brentford",
+      "away": "Man City"
+    },
+    {
+      "round": 14,
+      "home": "Chelsea",
+      "away": "Liverpool"
+    },
+    {
+      "round": 14,
+      "home": "Everton",
+      "away": "Fulham"
+    },
+    {
+      "round": 14,
+      "home": "Leeds",
+      "away": "Ipswich"
+    },
+    {
+      "round": 14,
+      "home": "Man United",
+      "away": "Coventry"
+    },
+    {
+      "round": 14,
+      "home": "Newcastle",
+      "away": "Sunderland"
+    },
+    {
+      "round": 14,
+      "home": "Nott'm Forest",
+      "away": "Brighton"
+    },
+    {
+      "round": 14,
+      "home": "Tottenham",
+      "away": "Arsenal"
+    },
+    {
+      "round": 15,
+      "home": "Arsenal",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 15,
+      "home": "Brighton",
+      "away": "Everton"
+    },
+    {
+      "round": 15,
+      "home": "Coventry",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 15,
+      "home": "Crystal Palace",
+      "away": "Man United"
+    },
+    {
+      "round": 15,
+      "home": "Fulham",
+      "away": "Brentford"
+    },
+    {
+      "round": 15,
+      "home": "Hull",
+      "away": "Tottenham"
+    },
+    {
+      "round": 15,
+      "home": "Ipswich",
+      "away": "Newcastle"
+    },
+    {
+      "round": 15,
+      "home": "Liverpool",
+      "away": "Leeds"
+    },
+    {
+      "round": 15,
+      "home": "Man City",
+      "away": "Chelsea"
+    },
+    {
+      "round": 15,
+      "home": "Sunderland",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 16,
+      "home": "Bournemouth",
+      "away": "Coventry"
+    },
+    {
+      "round": 16,
+      "home": "Arsenal",
+      "away": "Man United"
+    },
+    {
+      "round": 16,
+      "home": "Brentford",
+      "away": "Newcastle"
+    },
+    {
+      "round": 16,
+      "home": "Brighton",
+      "away": "Ipswich"
+    },
+    {
+      "round": 16,
+      "home": "Chelsea",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 16,
+      "home": "Leeds",
+      "away": "Fulham"
+    },
+    {
+      "round": 16,
+      "home": "Liverpool",
+      "away": "Tottenham"
+    },
+    {
+      "round": 16,
+      "home": "Man City",
+      "away": "Hull"
+    },
+    {
+      "round": 16,
+      "home": "Nott'm Forest",
+      "away": "Everton"
+    },
+    {
+      "round": 16,
+      "home": "Sunderland",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 17,
+      "home": "Aston Villa",
+      "away": "Leeds"
+    },
+    {
+      "round": 17,
+      "home": "Coventry",
+      "away": "Chelsea"
+    },
+    {
+      "round": 17,
+      "home": "Crystal Palace",
+      "away": "Arsenal"
+    },
+    {
+      "round": 17,
+      "home": "Everton",
+      "away": "Sunderland"
+    },
+    {
+      "round": 17,
+      "home": "Fulham",
+      "away": "Brighton"
+    },
+    {
+      "round": 17,
+      "home": "Hull",
+      "away": "Liverpool"
+    },
+    {
+      "round": 17,
+      "home": "Ipswich",
+      "away": "Brentford"
+    },
+    {
+      "round": 17,
+      "home": "Man United",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 17,
+      "home": "Newcastle",
+      "away": "Man City"
+    },
+    {
+      "round": 17,
+      "home": "Tottenham",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 18,
+      "home": "Aston Villa",
+      "away": "Liverpool"
+    },
+    {
+      "round": 18,
+      "home": "Coventry",
+      "away": "Brentford"
+    },
+    {
+      "round": 18,
+      "home": "Crystal Palace",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 18,
+      "home": "Everton",
+      "away": "Man City"
+    },
+    {
+      "round": 18,
+      "home": "Fulham",
+      "away": "Arsenal"
+    },
+    {
+      "round": 18,
+      "home": "Hull",
+      "away": "Leeds"
+    },
+    {
+      "round": 18,
+      "home": "Ipswich",
+      "away": "Chelsea"
+    },
+    {
+      "round": 18,
+      "home": "Man United",
+      "away": "Sunderland"
+    },
+    {
+      "round": 18,
+      "home": "Newcastle",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 18,
+      "home": "Tottenham",
+      "away": "Brighton"
+    },
+    {
+      "round": 19,
+      "home": "Bournemouth",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 19,
+      "home": "Arsenal",
+      "away": "Ipswich"
+    },
+    {
+      "round": 19,
+      "home": "Brentford",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 19,
+      "home": "Brighton",
+      "away": "Man United"
+    },
+    {
+      "round": 19,
+      "home": "Chelsea",
+      "away": "Newcastle"
+    },
+    {
+      "round": 19,
+      "home": "Leeds",
+      "away": "Everton"
+    },
+    {
+      "round": 19,
+      "home": "Liverpool",
+      "away": "Coventry"
+    },
+    {
+      "round": 19,
+      "home": "Man City",
+      "away": "Tottenham"
+    },
+    {
+      "round": 19,
+      "home": "Nott'm Forest",
+      "away": "Fulham"
+    },
+    {
+      "round": 19,
+      "home": "Sunderland",
+      "away": "Hull"
+    },
+    {
+      "round": 20,
+      "home": "Arsenal",
+      "away": "Brentford"
+    },
+    {
+      "round": 20,
+      "home": "Brighton",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 20,
+      "home": "Crystal Palace",
+      "away": "Chelsea"
+    },
+    {
+      "round": 20,
+      "home": "Everton",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 20,
+      "home": "Fulham",
+      "away": "Tottenham"
+    },
+    {
+      "round": 20,
+      "home": "Ipswich",
+      "away": "Coventry"
+    },
+    {
+      "round": 20,
+      "home": "Leeds",
+      "away": "Man City"
+    },
+    {
+      "round": 20,
+      "home": "Man United",
+      "away": "Newcastle"
+    },
+    {
+      "round": 20,
+      "home": "Nott'm Forest",
+      "away": "Hull"
+    },
+    {
+      "round": 20,
+      "home": "Sunderland",
+      "away": "Liverpool"
+    },
+    {
+      "round": 21,
+      "home": "Bournemouth",
+      "away": "Ipswich"
+    },
+    {
+      "round": 21,
+      "home": "Aston Villa",
+      "away": "Man United"
+    },
+    {
+      "round": 21,
+      "home": "Brentford",
+      "away": "Brighton"
+    },
+    {
+      "round": 21,
+      "home": "Chelsea",
+      "away": "Sunderland"
+    },
+    {
+      "round": 21,
+      "home": "Coventry",
+      "away": "Everton"
+    },
+    {
+      "round": 21,
+      "home": "Hull",
+      "away": "Arsenal"
+    },
+    {
+      "round": 21,
+      "home": "Liverpool",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 21,
+      "home": "Man City",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 21,
+      "home": "Newcastle",
+      "away": "Fulham"
+    },
+    {
+      "round": 21,
+      "home": "Tottenham",
+      "away": "Leeds"
+    },
+    {
+      "round": 22,
+      "home": "Arsenal",
+      "away": "Newcastle"
+    },
+    {
+      "round": 22,
+      "home": "Brighton",
+      "away": "Man City"
+    },
+    {
+      "round": 22,
+      "home": "Crystal Palace",
+      "away": "Tottenham"
+    },
+    {
+      "round": 22,
+      "home": "Everton",
+      "away": "Brentford"
+    },
+    {
+      "round": 22,
+      "home": "Fulham",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 22,
+      "home": "Ipswich",
+      "away": "Hull"
+    },
+    {
+      "round": 22,
+      "home": "Leeds",
+      "away": "Chelsea"
+    },
+    {
+      "round": 22,
+      "home": "Man United",
+      "away": "Liverpool"
+    },
+    {
+      "round": 22,
+      "home": "Nott'm Forest",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 22,
+      "home": "Sunderland",
+      "away": "Coventry"
+    },
+    {
+      "round": 23,
+      "home": "Bournemouth",
+      "away": "Fulham"
+    },
+    {
+      "round": 23,
+      "home": "Aston Villa",
+      "away": "Ipswich"
+    },
+    {
+      "round": 23,
+      "home": "Brentford",
+      "away": "Man United"
+    },
+    {
+      "round": 23,
+      "home": "Chelsea",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 23,
+      "home": "Coventry",
+      "away": "Leeds"
+    },
+    {
+      "round": 23,
+      "home": "Hull",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 23,
+      "home": "Liverpool",
+      "away": "Everton"
+    },
+    {
+      "round": 23,
+      "home": "Man City",
+      "away": "Arsenal"
+    },
+    {
+      "round": 23,
+      "home": "Newcastle",
+      "away": "Brighton"
+    },
+    {
+      "round": 23,
+      "home": "Tottenham",
+      "away": "Sunderland"
+    },
+    {
+      "round": 24,
+      "home": "Arsenal",
+      "away": "Liverpool"
+    },
+    {
+      "round": 24,
+      "home": "Brighton",
+      "away": "Hull"
+    },
+    {
+      "round": 24,
+      "home": "Crystal Palace",
+      "away": "Coventry"
+    },
+    {
+      "round": 24,
+      "home": "Everton",
+      "away": "Newcastle"
+    },
+    {
+      "round": 24,
+      "home": "Fulham",
+      "away": "Man City"
+    },
+    {
+      "round": 24,
+      "home": "Ipswich",
+      "away": "Tottenham"
+    },
+    {
+      "round": 24,
+      "home": "Leeds",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 24,
+      "home": "Man United",
+      "away": "Chelsea"
+    },
+    {
+      "round": 24,
+      "home": "Nott'm Forest",
+      "away": "Brentford"
+    },
+    {
+      "round": 24,
+      "home": "Sunderland",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 25,
+      "home": "Aston Villa",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 25,
+      "home": "Coventry",
+      "away": "Liverpool"
+    },
+    {
+      "round": 25,
+      "home": "Crystal Palace",
+      "away": "Brentford"
+    },
+    {
+      "round": 25,
+      "home": "Everton",
+      "away": "Leeds"
+    },
+    {
+      "round": 25,
+      "home": "Fulham",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 25,
+      "home": "Hull",
+      "away": "Sunderland"
+    },
+    {
+      "round": 25,
+      "home": "Ipswich",
+      "away": "Arsenal"
+    },
+    {
+      "round": 25,
+      "home": "Man United",
+      "away": "Brighton"
+    },
+    {
+      "round": 25,
+      "home": "Newcastle",
+      "away": "Chelsea"
+    },
+    {
+      "round": 25,
+      "home": "Tottenham",
+      "away": "Man City"
+    },
+    {
+      "round": 26,
+      "home": "Bournemouth",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 26,
+      "home": "Arsenal",
+      "away": "Fulham"
+    },
+    {
+      "round": 26,
+      "home": "Brentford",
+      "away": "Coventry"
+    },
+    {
+      "round": 26,
+      "home": "Brighton",
+      "away": "Tottenham"
+    },
+    {
+      "round": 26,
+      "home": "Chelsea",
+      "away": "Ipswich"
+    },
+    {
+      "round": 26,
+      "home": "Leeds",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 26,
+      "home": "Liverpool",
+      "away": "Hull"
+    },
+    {
+      "round": 26,
+      "home": "Man City",
+      "away": "Newcastle"
+    },
+    {
+      "round": 26,
+      "home": "Nott'm Forest",
+      "away": "Man United"
+    },
+    {
+      "round": 26,
+      "home": "Sunderland",
+      "away": "Everton"
+    },
+    {
+      "round": 27,
+      "home": "Aston Villa",
+      "away": "Chelsea"
+    },
+    {
+      "round": 27,
+      "home": "Coventry",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 27,
+      "home": "Crystal Palace",
+      "away": "Sunderland"
+    },
+    {
+      "round": 27,
+      "home": "Everton",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 27,
+      "home": "Fulham",
+      "away": "Leeds"
+    },
+    {
+      "round": 27,
+      "home": "Hull",
+      "away": "Man City"
+    },
+    {
+      "round": 27,
+      "home": "Ipswich",
+      "away": "Brighton"
+    },
+    {
+      "round": 27,
+      "home": "Man United",
+      "away": "Arsenal"
+    },
+    {
+      "round": 27,
+      "home": "Newcastle",
+      "away": "Brentford"
+    },
+    {
+      "round": 27,
+      "home": "Tottenham",
+      "away": "Liverpool"
+    },
+    {
+      "round": 28,
+      "home": "Bournemouth",
+      "away": "Tottenham"
+    },
+    {
+      "round": 28,
+      "home": "Arsenal",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 28,
+      "home": "Brentford",
+      "away": "Ipswich"
+    },
+    {
+      "round": 28,
+      "home": "Brighton",
+      "away": "Fulham"
+    },
+    {
+      "round": 28,
+      "home": "Chelsea",
+      "away": "Coventry"
+    },
+    {
+      "round": 28,
+      "home": "Leeds",
+      "away": "Hull"
+    },
+    {
+      "round": 28,
+      "home": "Liverpool",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 28,
+      "home": "Man City",
+      "away": "Everton"
+    },
+    {
+      "round": 28,
+      "home": "Nott'm Forest",
+      "away": "Newcastle"
+    },
+    {
+      "round": 28,
+      "home": "Sunderland",
+      "away": "Man United"
+    },
+    {
+      "round": 29,
+      "home": "Bournemouth",
+      "away": "Newcastle"
+    },
+    {
+      "round": 29,
+      "home": "Aston Villa",
+      "away": "Hull"
+    },
+    {
+      "round": 29,
+      "home": "Chelsea",
+      "away": "Arsenal"
+    },
+    {
+      "round": 29,
+      "home": "Coventry",
+      "away": "Man City"
+    },
+    {
+      "round": 29,
+      "home": "Crystal Palace",
+      "away": "Fulham"
+    },
+    {
+      "round": 29,
+      "home": "Leeds",
+      "away": "Brighton"
+    },
+    {
+      "round": 29,
+      "home": "Liverpool",
+      "away": "Ipswich"
+    },
+    {
+      "round": 29,
+      "home": "Man United",
+      "away": "Everton"
+    },
+    {
+      "round": 29,
+      "home": "Sunderland",
+      "away": "Brentford"
+    },
+    {
+      "round": 29,
+      "home": "Tottenham",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 30,
+      "home": "Arsenal",
+      "away": "Sunderland"
+    },
+    {
+      "round": 30,
+      "home": "Brentford",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 30,
+      "home": "Brighton",
+      "away": "Coventry"
+    },
+    {
+      "round": 30,
+      "home": "Everton",
+      "away": "Tottenham"
+    },
+    {
+      "round": 30,
+      "home": "Fulham",
+      "away": "Liverpool"
+    },
+    {
+      "round": 30,
+      "home": "Hull",
+      "away": "Chelsea"
+    },
+    {
+      "round": 30,
+      "home": "Ipswich",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 30,
+      "home": "Man City",
+      "away": "Man United"
+    },
+    {
+      "round": 30,
+      "home": "Newcastle",
+      "away": "Leeds"
+    },
+    {
+      "round": 30,
+      "home": "Nott'm Forest",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 31,
+      "home": "Bournemouth",
+      "away": "Man City"
+    },
+    {
+      "round": 31,
+      "home": "Aston Villa",
+      "away": "Brighton"
+    },
+    {
+      "round": 31,
+      "home": "Chelsea",
+      "away": "Fulham"
+    },
+    {
+      "round": 31,
+      "home": "Coventry",
+      "away": "Arsenal"
+    },
+    {
+      "round": 31,
+      "home": "Crystal Palace",
+      "away": "Everton"
+    },
+    {
+      "round": 31,
+      "home": "Leeds",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 31,
+      "home": "Liverpool",
+      "away": "Newcastle"
+    },
+    {
+      "round": 31,
+      "home": "Man United",
+      "away": "Hull"
+    },
+    {
+      "round": 31,
+      "home": "Sunderland",
+      "away": "Ipswich"
+    },
+    {
+      "round": 31,
+      "home": "Tottenham",
+      "away": "Brentford"
+    },
+    {
+      "round": 32,
+      "home": "Arsenal",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 32,
+      "home": "Brentford",
+      "away": "Leeds"
+    },
+    {
+      "round": 32,
+      "home": "Brighton",
+      "away": "Chelsea"
+    },
+    {
+      "round": 32,
+      "home": "Everton",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 32,
+      "home": "Fulham",
+      "away": "Sunderland"
+    },
+    {
+      "round": 32,
+      "home": "Hull",
+      "away": "Coventry"
+    },
+    {
+      "round": 32,
+      "home": "Ipswich",
+      "away": "Man United"
+    },
+    {
+      "round": 32,
+      "home": "Man City",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 32,
+      "home": "Newcastle",
+      "away": "Tottenham"
+    },
+    {
+      "round": 32,
+      "home": "Nott'm Forest",
+      "away": "Liverpool"
+    },
+    {
+      "round": 33,
+      "home": "Bournemouth",
+      "away": "Arsenal"
+    },
+    {
+      "round": 33,
+      "home": "Aston Villa",
+      "away": "Coventry"
+    },
+    {
+      "round": 33,
+      "home": "Brentford",
+      "away": "Fulham"
+    },
+    {
+      "round": 33,
+      "home": "Chelsea",
+      "away": "Man City"
+    },
+    {
+      "round": 33,
+      "home": "Everton",
+      "away": "Brighton"
+    },
+    {
+      "round": 33,
+      "home": "Leeds",
+      "away": "Liverpool"
+    },
+    {
+      "round": 33,
+      "home": "Man United",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 33,
+      "home": "Newcastle",
+      "away": "Ipswich"
+    },
+    {
+      "round": 33,
+      "home": "Nott'm Forest",
+      "away": "Sunderland"
+    },
+    {
+      "round": 33,
+      "home": "Tottenham",
+      "away": "Hull"
+    },
+    {
+      "round": 34,
+      "home": "Arsenal",
+      "away": "Tottenham"
+    },
+    {
+      "round": 34,
+      "home": "Brighton",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 34,
+      "home": "Coventry",
+      "away": "Man United"
+    },
+    {
+      "round": 34,
+      "home": "Crystal Palace",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 34,
+      "home": "Fulham",
+      "away": "Everton"
+    },
+    {
+      "round": 34,
+      "home": "Hull",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 34,
+      "home": "Ipswich",
+      "away": "Leeds"
+    },
+    {
+      "round": 34,
+      "home": "Liverpool",
+      "away": "Chelsea"
+    },
+    {
+      "round": 34,
+      "home": "Man City",
+      "away": "Brentford"
+    },
+    {
+      "round": 34,
+      "home": "Sunderland",
+      "away": "Newcastle"
+    },
+    {
+      "round": 35,
+      "home": "Bournemouth",
+      "away": "Man United"
+    },
+    {
+      "round": 35,
+      "home": "Brentford",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 35,
+      "home": "Brighton",
+      "away": "Sunderland"
+    },
+    {
+      "round": 35,
+      "home": "Everton",
+      "away": "Hull"
+    },
+    {
+      "round": 35,
+      "home": "Fulham",
+      "away": "Ipswich"
+    },
+    {
+      "round": 35,
+      "home": "Leeds",
+      "away": "Arsenal"
+    },
+    {
+      "round": 35,
+      "home": "Man City",
+      "away": "Liverpool"
+    },
+    {
+      "round": 35,
+      "home": "Newcastle",
+      "away": "Coventry"
+    },
+    {
+      "round": 35,
+      "home": "Nott'm Forest",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 35,
+      "home": "Tottenham",
+      "away": "Chelsea"
+    },
+    {
+      "round": 36,
+      "home": "Arsenal",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 36,
+      "home": "Aston Villa",
+      "away": "Newcastle"
+    },
+    {
+      "round": 36,
+      "home": "Chelsea",
+      "away": "Everton"
+    },
+    {
+      "round": 36,
+      "home": "Coventry",
+      "away": "Tottenham"
+    },
+    {
+      "round": 36,
+      "home": "Crystal Palace",
+      "away": "Brighton"
+    },
+    {
+      "round": 36,
+      "home": "Hull",
+      "away": "Fulham"
+    },
+    {
+      "round": 36,
+      "home": "Ipswich",
+      "away": "Man City"
+    },
+    {
+      "round": 36,
+      "home": "Liverpool",
+      "away": "Brentford"
+    },
+    {
+      "round": 36,
+      "home": "Man United",
+      "away": "Leeds"
+    },
+    {
+      "round": 36,
+      "home": "Sunderland",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 37,
+      "home": "Bournemouth",
+      "away": "Chelsea"
+    },
+    {
+      "round": 37,
+      "home": "Brentford",
+      "away": "Hull"
+    },
+    {
+      "round": 37,
+      "home": "Brighton",
+      "away": "Liverpool"
+    },
+    {
+      "round": 37,
+      "home": "Everton",
+      "away": "Arsenal"
+    },
+    {
+      "round": 37,
+      "home": "Fulham",
+      "away": "Coventry"
+    },
+    {
+      "round": 37,
+      "home": "Leeds",
+      "away": "Sunderland"
+    },
+    {
+      "round": 37,
+      "home": "Man City",
+      "away": "Aston Villa"
+    },
+    {
+      "round": 37,
+      "home": "Newcastle",
+      "away": "Crystal Palace"
+    },
+    {
+      "round": 37,
+      "home": "Nott'm Forest",
+      "away": "Ipswich"
+    },
+    {
+      "round": 37,
+      "home": "Tottenham",
+      "away": "Man United"
+    },
+    {
+      "round": 38,
+      "home": "Arsenal",
+      "away": "Brighton"
+    },
+    {
+      "round": 38,
+      "home": "Aston Villa",
+      "away": "Tottenham"
+    },
+    {
+      "round": 38,
+      "home": "Chelsea",
+      "away": "Brentford"
+    },
+    {
+      "round": 38,
+      "home": "Coventry",
+      "away": "Nott'm Forest"
+    },
+    {
+      "round": 38,
+      "home": "Crystal Palace",
+      "away": "Leeds"
+    },
+    {
+      "round": 38,
+      "home": "Hull",
+      "away": "Newcastle"
+    },
+    {
+      "round": 38,
+      "home": "Ipswich",
+      "away": "Everton"
+    },
+    {
+      "round": 38,
+      "home": "Liverpool",
+      "away": "Bournemouth"
+    },
+    {
+      "round": 38,
+      "home": "Man United",
+      "away": "Fulham"
+    },
+    {
+      "round": 38,
+      "home": "Sunderland",
+      "away": "Man City"
+    }
+  ]
+}

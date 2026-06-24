@@ -1,0 +1,79 @@
+/* Auth.module.css — shared by Login & Register */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.box {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.2rem 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+.icon { font-size: 2.2rem; }
+.header h1 { font-size: 1.5rem; margin-top: .5rem; }
+.header p  { color: var(--text-muted); font-size: .9rem; margin-top: .25rem; }
+
+.errorBanner {
+  background: rgba(224, 82, 82, .15);
+  border: 1px solid var(--red);
+  color: var(--red);
+  border-radius: 6px;
+  padding: .65rem 1rem;
+  font-size: .88rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: .88rem;
+  color: var(--text-muted);
+}
+.footer a { color: var(--accent); }
+.footer a:hover { text-decoration: underline; }
+
+.pwWrap {
+  position: relative;
+  display: block;
+}
+.pwWrap input {
+  width: 100%;
+  padding-right: 2.8rem;
+}
+.pwToggle {
+  position: absolute;
+  top: 50%;
+  right: .5rem;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 6px;
+  transition: color .15s ease, background .15s ease;
+}
+.pwToggle svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+.pwToggle:hover,
+.pwToggle:focus-visible {
+  color: var(--accent);
+  background: rgba(74, 222, 128, 0.1);
+  outline: none;
+}

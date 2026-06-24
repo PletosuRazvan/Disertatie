@@ -1,0 +1,22 @@
+# Node / frontend
+**/node_modules
+frontend/dist
+
+# Python
+**/__pycache__
+**/*.pyc
+backend/venv
+backend/.env
+
+# Editor / OS
+.vscode
+.git
+.gitignore
+
+# Thesis / docs (not needed in the image)
+Disertatie/
+my_thesis/
+General/
+*.tex
+*.pdf
+feedback.txt

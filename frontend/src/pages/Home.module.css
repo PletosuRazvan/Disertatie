@@ -1,0 +1,47 @@
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.hero h1 span { color: var(--accent); }
+.hero p { color: var(--text-muted); margin: 1rem auto; max-width: 520px; }
+
+.heroActions { display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 2.5rem;
+}
+.statCard { padding: 1.2rem 1.5rem; display: flex; flex-direction: column; gap: .2rem; }
+.statVal  { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+.statLabel { font-size: .8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
+
+.sectionHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+
+.resultsList { display: flex; flex-direction: column; gap: .6rem; }
+.matchCard {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: .9rem 1.4rem;
+}
+.team  { font-size: .95rem; font-weight: 500; }
+.score { font-size: 1.2rem; font-weight: 700; color: var(--text); background: #111; padding: .2rem .8rem; border-radius: 6px; }
+.badge { font-size: .75rem; letter-spacing: .06em; justify-self: end; }
+
+.ctaBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.6rem 2rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}

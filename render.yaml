@@ -1,0 +1,22 @@
+# Render Blueprint — deploy the whole app as one Docker web service.
+# 1. Push this repo to GitHub.
+# 2. On render.com: New > Blueprint, pick the repo.
+# 3. Set the secret env vars below in the dashboard (marked sync: false).
+services:
+  - type: web
+    name: epl-predict
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: MONGO_URI
+        sync: false        # paste your MongoDB Atlas connection string
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FLASK_DEBUG
+        value: "false"
+      - key: CORS_ORIGINS
+        value: "*"

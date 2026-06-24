@@ -1,0 +1,43 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+backend/venv/
+venv/
+.venv/
+
+# ── Secrets / env ──
+.env
+*.env
+!*.env.example
+backend/.env
+
+# ── Node / frontend ──
+node_modules/
+frontend/dist/
+dist/
+
+# ── Editor / OS ──
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ── Archives / misc ──
+*.zip
+
+# ── Thesis / unrelated folders (not part of the app) ──
+Disertatie/
+General/
+my_thesis/
+
+# ── LaTeX build artifacts ──
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
