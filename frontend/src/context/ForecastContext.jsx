@@ -104,11 +104,16 @@ export function ForecastProvider({ children }) {
             const msg = JSON.parse(json)
             if (msg.type === 'progress') {
               setProgress({ done: msg.done, total: msg.total })
-              // Anchor calibration at the first progress event (skips startup latency).
               if (calibAt === 0) {
+                // Anchor at the first event and seed a rough ETA from total elapsed
+                // (includes startup) so the countdown is never stuck at 0.
                 calibAt = Date.now()
                 calibDone = msg.done
-              } else if (msg.done > calibDone + 2) {
+                if (msg.done > 0) {
+                  const rough = (Date.now() - begin) / msg.done
+                  setEtaMs(Math.min(Math.max(rough, MIN_MS_PER_RUN), MAX_MS_PER_RUN) * safeRuns)
+                }
+              } else if (msg.done > calibDone) {
                 // Steady-state cost per run, measured since the anchor.
                 const live = (Date.now() - calibAt) / (msg.done - calibDone)
                 const clamped = Math.min(Math.max(live, MIN_MS_PER_RUN), MAX_MS_PER_RUN)

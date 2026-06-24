@@ -98,7 +98,7 @@ export default function Forecast() {
   // Once a few seasons are done, project remaining time from observed throughput.
   const remainingMs = (() => {
     if (!loading) return 0
-    if (doneRuns >= 5 && elapsedMs > 0) {
+    if (doneRuns >= 2 && elapsedMs > 0) {
       const msPerRun = elapsedMs / doneRuns
       return Math.max(0, Math.round((totalRuns - doneRuns) * msPerRun))
     }
@@ -194,7 +194,7 @@ export default function Forecast() {
               Simulating seasons… <strong>{doneRuns.toLocaleString()} / {totalRuns.toLocaleString()}</strong>
             </span>
             <span className={styles.timer}>
-              {Math.round(progressPct)}% · {fmtDuration(elapsedMs)} elapsed · ~{fmtDuration(remainingMs)} left
+              {Math.round(progressPct)}% · {fmtDuration(elapsedMs)} elapsed · {doneRuns < 1 ? 'estimating…' : `~${fmtDuration(remainingMs)} left`}
             </span>
           </div>
           <div className={styles.progressTrack}>
