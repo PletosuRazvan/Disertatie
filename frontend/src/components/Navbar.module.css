@@ -25,6 +25,13 @@
 .brand strong { color: var(--accent); }
 .logo { font-size: 1.3rem; }
 
+.menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 2rem;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -67,12 +74,6 @@
   margin-left: auto;
 }
 
-.username {
-  font-size: .85rem;
-  color: var(--accent);
-  font-weight: 500;
-}
-
 .runningDot {
   display: inline-block;
   width: 7px;
@@ -86,4 +87,103 @@
 @keyframes pulse {
   0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--accent-glow); }
   50%      { opacity: .4; box-shadow: 0 0 0 4px transparent; }
+}
+
+.username {
+  font-size: .85rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Hamburger button — hidden on desktop, shown on mobile. */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform .25s ease, opacity .2s ease;
+}
+.burgerOpen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burgerOpen span:nth-child(2) { opacity: 0; }
+.burgerOpen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .nav {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .menu {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: .5rem 1rem 1rem;
+    background: rgba(20, 22, 19, 0.98);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    max-height: calc(100vh - var(--nav-h));
+    overflow-y: auto;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .22s ease, opacity .22s ease;
+  }
+  .menuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    flex: none;
+  }
+  .links a {
+    padding: .85rem .25rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .links a::after { display: none; }
+
+  .auth {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .6rem;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .auth :global(.btn) {
+    width: 100%;
+    text-align: center;
+  }
+  .username {
+    padding: .5rem .25rem;
+    text-align: center;
+  }
 }
