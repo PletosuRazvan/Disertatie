@@ -126,27 +126,127 @@
   display: flex;
   align-items: center;
   gap: .6rem;
-  margin-bottom: .8rem;
+  margin-bottom: .85rem;
   flex-wrap: wrap;
 }
 
-.matchList {
-  display: flex;
-  flex-direction: column;
-  gap: .35rem;
-}
-.matchRow {
+.legend {
   display: flex;
   align-items: center;
-  gap: .6rem;
-  padding: .5rem .7rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-size: .9rem;
+  gap: .4rem;
+  font-size: .8rem;
+  color: var(--text-muted);
+  margin: .8rem 0 .4rem;
 }
-.matchScore {
-  font-weight: 700;
-  min-width: 3.2rem;
+.dotCl, .dotEl, .dotRel {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 2px;
+}
+.dotCl  { background: #1a6ef5; }
+.dotEl  { background: #f5a623; }
+.dotRel { background: var(--red); }
+
+.cl  td:first-child { border-left: 3px solid #1a6ef5; }
+.el  td:first-child { border-left: 3px solid #f5a623; }
+.rel td:first-child { border-left: 3px solid var(--red); }
+
+.pos {
+  display: inline-block;
+  width: 1.4rem;
   text-align: center;
+  font-weight: 600;
+}
+
+.matchList {
+  padding: .35rem .5rem;
+  margin-top: 1rem;
+}
+.matchRow {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr 28px;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .6rem;
+  border-bottom: 1px solid var(--border, rgba(255,255,255,.06));
+}
+.matchRow:last-child { border-bottom: none; }
+
+.team { font-size: .92rem; }
+.home { text-align: right; }
+.away { text-align: left; }
+.winner { font-weight: 700; color: var(--text); }
+
+.score {
+  text-align: center;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.badgeH, .badgeD, .badgeA {
+  display: inline-block;
+  width: 22px;
+  text-align: center;
+  font-size: .72rem;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: .12rem 0;
+}
+.badgeH { background: rgba(67, 160, 71, .18);  color: #5cc46a; }
+.badgeD { background: rgba(240, 180, 0, .18);   color: #f0b400; }
+.badgeA { background: rgba(79, 157, 255, .18);  color: #4f9dff; }
+
+/* Forecast table — mirrors the Forecast page exactly. */
+.fcTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.th {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: color .15s ease;
+}
+.th:hover { color: var(--accent); }
+.thNum { text-align: right; }
+.thActive { color: var(--accent); }
+.sortArrow {
+  font-size: .72rem;
+  opacity: .7;
+}
+.teamCell {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.numCell {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  min-width: 90px;
+}
+.barWrap {
+  position: relative;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.bar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  border-radius: 4px;
+  opacity: .35;
+  min-width: 0;
+}
+.bar_gold { background: #f5c518; }
+.bar_cl   { background: #3ea6ff; }
+.bar_mid  { background: #36c275; }
+.bar_rel  { background: #e53935; }
+.barLabel {
+  position: relative;
+  z-index: 1;
+  padding-right: .4rem;
+  font-variant-numeric: tabular-nums;
 }

@@ -7,7 +7,37 @@ import styles from './History.module.css'
 const OUTCOME_LABEL = { H: 'Home Win', D: 'Draw', A: 'Away Win' }
 const OUTCOME_CLASS  = { H: 'badge-h', D: 'badge-d', A: 'badge-a' }
 const RESULT_LABEL   = { H: '1', D: 'X', A: '2' }
-const RESULT_CLASS   = { H: 'badge-h', D: 'badge-d', A: 'badge-a' }
+const RESULT_CLASS   = { H: styles.badgeH, D: styles.badgeD, A: styles.badgeA }
+
+const CL_ZONE  = [1, 2, 3, 4]
+const EL_ZONE  = [5]
+const REL_ZONE = [18, 19, 20]
+
+function rowClass(pos) {
+  if (CL_ZONE.includes(pos))  return styles.cl
+  if (EL_ZONE.includes(pos))  return styles.el
+  if (REL_ZONE.includes(pos)) return styles.rel
+  return ''
+}
+
+// Same columns as the Forecast page (counts, not percentages, with bars).
+const COLUMNS = [
+  { key: 'team',           label: 'Team',        numeric: false },
+  { key: 'title_count',    label: 'Titles',      numeric: true, bar: 'gold', barPct: 'title_pct' },
+  { key: 'top4_count',     label: 'Top 4',       numeric: true, bar: 'cl',   barPct: 'top4_pct' },
+  { key: 'top10_count',    label: 'Top 10',      numeric: true, bar: 'mid',  barPct: 'top10_pct' },
+  { key: 'releg_count',    label: 'Relegations', numeric: true, bar: 'rel',  barPct: 'releg_pct' },
+  { key: 'avg_points',     label: 'Avg Pts',     numeric: true },
+  { key: 'avg_position',   label: 'Avg Pos',     numeric: true },
+  { key: 'best_position',  label: 'Best',        numeric: true },
+  { key: 'worst_position', label: 'Worst',       numeric: true },
+  { key: 'avg_yellows',    label: 'Yel/Season',  numeric: true },
+  { key: 'avg_reds',       label: 'Red/Season',  numeric: true },
+  { key: 'avg_corners',    label: 'Cor/Match',   numeric: true },
+]
+
+// Columns where a smaller value is better, so the first click sorts ascending.
+const ASC_FIRST = new Set(['avg_position', 'best_position', 'worst_position'])
 
 const TABS = [
   { key: 'predictions',  label: 'Predictions' },
@@ -158,24 +188,40 @@ function Simulations({ items }) {
 
           {open === s.id && (
             <>
-              <div className="table-wrapper" style={{ marginTop: '.8rem' }}>
+              <div className={styles.legend}>
+                <span className={styles.dotCl} /> Champions League
+                <span className={styles.dotEl} style={{ marginLeft: '1rem' }} /> Europa League
+                <span className={styles.dotRel} style={{ marginLeft: '1rem' }} /> Relegation
+              </div>
+              <div className="table-wrapper" style={{ marginTop: '.4rem' }}>
                 <table>
                   <thead>
-                    <tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr>
+                    <tr>
+                      <th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th>
+                      <th>L</th><th>GF</th><th>GA</th><th>GD</th><th><strong>Pts</strong></th>
+                      <th title="Yellow cards (season total)">Yel</th>
+                      <th title="Red cards (season total)">Red</th>
+                      <th title="Corners (average per match)">Cor/M</th>
+                    </tr>
                   </thead>
                   <tbody>
                     {s.standings.map((r) => (
-                      <tr key={r.team}>
-                        <td>{r.pos}</td>
+                      <tr key={r.team} className={rowClass(r.pos)}>
+                        <td><span className={styles.pos}>{r.pos}</span></td>
                         <td style={{ fontWeight: 500 }}>{r.team}</td>
                         <td>{r.played}</td>
                         <td>{r.won}</td>
                         <td>{r.drawn}</td>
                         <td>{r.lost}</td>
+                        <td>{r.gf}</td>
+                        <td>{r.ga}</td>
                         <td style={{ color: r.gd >= 0 ? 'var(--accent)' : 'var(--red)' }}>
                           {r.gd > 0 ? `+${r.gd}` : r.gd}
                         </td>
                         <td><strong>{r.points}</strong></td>
+                        <td>{r.yellows != null ? Math.round(r.yellows) : '—'}</td>
+                        <td>{r.reds != null ? Math.round(r.reds) : '—'}</td>
+                        <td>{r.corners_avg ?? '—'}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -217,12 +263,12 @@ function MatchdayBrowser({ matchdays }) {
           disabled={round === matchdays.length - 1}
         >Next →</button>
       </div>
-      <div className={styles.matchList}>
+      <div className={`card ${styles.matchList}`}>
         {md?.matches.map((m, i) => (
           <div key={i} className={styles.matchRow}>
-            <span style={{ fontWeight: m.result === 'H' ? 700 : 400, textAlign: 'right', flex: 1 }}>{m.home_team}</span>
-            <span className={styles.matchScore}>{m.home_goals} – {m.away_goals}</span>
-            <span style={{ fontWeight: m.result === 'A' ? 700 : 400, flex: 1 }}>{m.away_team}</span>
+            <span className={`${styles.team} ${styles.home} ${m.result === 'H' ? styles.winner : ''}`}>{m.home_team}</span>
+            <span className={styles.score}>{m.home_goals} – {m.away_goals}</span>
+            <span className={`${styles.team} ${styles.away} ${m.result === 'A' ? styles.winner : ''}`}>{m.away_team}</span>
             <span className={RESULT_CLASS[m.result]}>{RESULT_LABEL[m.result]}</span>
           </div>
         ))}
@@ -254,40 +300,87 @@ function Forecasts({ items }) {
           </div>
           <div className={styles.date}>{fmtDate(f.timestamp)}</div>
 
-          {open === f.id && (
-            <div className="table-wrapper" style={{ marginTop: '.8rem' }}>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Team</th><th>Title%</th><th>Top 4%</th><th>Top 10%</th>
-                    <th>Releg%</th><th>Avg Pts</th><th>Avg Pos</th><th>Best</th><th>Worst</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[...f.table]
-                    .sort((a, b) => (b.title_pct ?? 0) - (a.title_pct ?? 0))
-                    .map((r) => (
-                      <tr key={r.team}>
-                        <td style={{ fontWeight: 500 }}>{r.team}</td>
-                        <td>{r.title_pct ?? r.title_count}%</td>
-                        <td>{r.top4_pct ?? r.top4_count}%</td>
-                        <td>{r.top10_pct != null ? `${r.top10_pct}%` : '—'}</td>
-                        <td>{r.releg_pct ?? r.releg_count}%</td>
-                        <td>{r.avg_points}</td>
-                        <td>{r.avg_position ?? '—'}</td>
-                        <td>{r.best_position ?? '—'}</td>
-                        <td>{r.worst_position ?? '—'}</td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
-            </div>
-          )}
+          {open === f.id && <ForecastTable table={f.table} />}
         </div>
       ))}
     </div>
   )
 }
+
+// Mirrors the Forecast page table exactly: sortable columns, counts (not %)
+// with proportional bars.
+function ForecastTable({ table }) {
+  const [sortKey, setSortKey] = useState('title_count')
+  const [sortDir, setSortDir] = useState('desc')
+
+  function toggleSort(key) {
+    if (key === sortKey) {
+      setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'))
+    } else {
+      setSortKey(key)
+      setSortDir(ASC_FIRST.has(key) ? 'asc' : key === 'team' ? 'asc' : 'desc')
+    }
+  }
+
+  const sorted = [...(table || [])].sort((a, b) => {
+    let av = a[sortKey]
+    let bv = b[sortKey]
+    if (sortKey === 'team') {
+      av = String(av).toLowerCase()
+      bv = String(bv).toLowerCase()
+      return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av)
+    }
+    return sortDir === 'asc' ? (av ?? 0) - (bv ?? 0) : (bv ?? 0) - (av ?? 0)
+  })
+
+  return (
+    <div className="card table-wrapper" style={{ marginTop: '.8rem' }}>
+      <table className={styles.fcTable}>
+        <thead>
+          <tr>
+            {COLUMNS.map((c) => (
+              <th
+                key={c.key}
+                className={`${styles.th} ${c.numeric ? styles.thNum : ''} ${sortKey === c.key ? styles.thActive : ''}`}
+                onClick={() => toggleSort(c.key)}
+              >
+                {c.label}
+                <span className={styles.sortArrow}>
+                  {sortKey === c.key ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ' ⇅'}
+                </span>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {sorted.map((r) => (
+            <tr key={r.team}>
+              <td className={styles.teamCell}>{r.team}</td>
+              {COLUMNS.slice(1).map((c) => (
+                <td key={c.key} className={styles.numCell}>
+                  {c.bar ? (
+                    <div className={styles.barWrap}>
+                      <div
+                        className={`${styles.bar} ${styles[`bar_${c.bar}`]}`}
+                        style={{ width: `${Math.min(c.barPct ? r[c.barPct] : r[c.key], 100)}%` }}
+                      />
+                      <span className={styles.barLabel}>
+                        {r[c.key]}{c.suffix || ''}
+                      </span>
+                    </div>
+                  ) : (
+                    <>{r[c.key] ?? '—'}{c.suffix || ''}</>
+                  )}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 
 function Empty({ what, to, cta }) {
   return (
