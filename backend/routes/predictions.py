@@ -73,6 +73,7 @@ def simulate():
             "season": result.get("season"),
             "champion": champion,
             "standings": standings,
+            "matchdays": result.get("matchdays", []),
             "timestamp": datetime.now(timezone.utc),
         })
 
@@ -122,6 +123,8 @@ def simulate_batch():
             "runs": result.get("runs"),
             "favourite": favourite["team"] if favourite else None,
             "table": table,
+            "teams": result.get("teams", []),
+            "is_next_season": result.get("is_next_season", False),
             "timestamp": datetime.now(timezone.utc),
         })
 
@@ -198,6 +201,8 @@ def simulate_batch_stream():
                 "runs": result.get("runs"),
                 "favourite": favourite["team"] if favourite else None,
                 "table": table,
+                "teams": result.get("teams", []),
+                "is_next_season": result.get("is_next_season", False),
                 "timestamp": datetime.now(timezone.utc),
             })
 
@@ -295,6 +300,7 @@ def history_simulations():
         "season": d.get("season"),
         "champion": d.get("champion"),
         "standings": d.get("standings", []),
+        "matchdays": d.get("matchdays", []),
         "timestamp": d["timestamp"].isoformat(),
     } for d in cursor]
     return jsonify(items), 200
@@ -315,6 +321,8 @@ def history_forecasts():
         "runs": d.get("runs"),
         "favourite": d.get("favourite"),
         "table": d.get("table", []),
+        "teams": d.get("teams", []),
+        "is_next_season": d.get("is_next_season", False),
         "timestamp": d["timestamp"].isoformat(),
     } for d in cursor]
     return jsonify(items), 200

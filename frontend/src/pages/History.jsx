@@ -6,6 +6,8 @@ import styles from './History.module.css'
 
 const OUTCOME_LABEL = { H: 'Home Win', D: 'Draw', A: 'Away Win' }
 const OUTCOME_CLASS  = { H: 'badge-h', D: 'badge-d', A: 'badge-a' }
+const RESULT_LABEL   = { H: '1', D: 'X', A: '2' }
+const RESULT_CLASS   = { H: 'badge-h', D: 'badge-d', A: 'badge-a' }
 
 const TABS = [
   { key: 'predictions',  label: 'Predictions' },
@@ -149,38 +151,82 @@ function Simulations({ items }) {
               className="btn btn-outline"
               onClick={() => setOpen(open === s.id ? null : s.id)}
             >
-              {open === s.id ? 'Hide table' : 'View table'}
+              {open === s.id ? 'Hide details' : 'View details'}
             </button>
           </div>
           <div className={styles.date}>{fmtDate(s.timestamp)}</div>
 
           {open === s.id && (
-            <div className="table-wrapper" style={{ marginTop: '.8rem' }}>
-              <table>
-                <thead>
-                  <tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr>
-                </thead>
-                <tbody>
-                  {s.standings.map((r) => (
-                    <tr key={r.team}>
-                      <td>{r.pos}</td>
-                      <td style={{ fontWeight: 500 }}>{r.team}</td>
-                      <td>{r.played}</td>
-                      <td>{r.won}</td>
-                      <td>{r.drawn}</td>
-                      <td>{r.lost}</td>
-                      <td style={{ color: r.gd >= 0 ? 'var(--accent)' : 'var(--red)' }}>
-                        {r.gd > 0 ? `+${r.gd}` : r.gd}
-                      </td>
-                      <td><strong>{r.points}</strong></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <>
+              <div className="table-wrapper" style={{ marginTop: '.8rem' }}>
+                <table>
+                  <thead>
+                    <tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr>
+                  </thead>
+                  <tbody>
+                    {s.standings.map((r) => (
+                      <tr key={r.team}>
+                        <td>{r.pos}</td>
+                        <td style={{ fontWeight: 500 }}>{r.team}</td>
+                        <td>{r.played}</td>
+                        <td>{r.won}</td>
+                        <td>{r.drawn}</td>
+                        <td>{r.lost}</td>
+                        <td style={{ color: r.gd >= 0 ? 'var(--accent)' : 'var(--red)' }}>
+                          {r.gd > 0 ? `+${r.gd}` : r.gd}
+                        </td>
+                        <td><strong>{r.points}</strong></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {s.matchdays?.length > 0 && <MatchdayBrowser matchdays={s.matchdays} />}
+            </>
           )}
         </div>
       ))}
+    </div>
+  )
+}
+
+function MatchdayBrowser({ matchdays }) {
+  const [round, setRound] = useState(0)
+  const md = matchdays[round]
+  return (
+    <div style={{ marginTop: '1rem' }}>
+      <div className={styles.roundNav}>
+        <button
+          className="btn btn-outline"
+          onClick={() => setRound((r) => Math.max(0, r - 1))}
+          disabled={round === 0}
+        >← Prev</button>
+        <select
+          className="form-control"
+          value={round}
+          onChange={(e) => setRound(Number(e.target.value))}
+          style={{ width: 'auto' }}
+        >
+          {matchdays.map((m, i) => (
+            <option key={i} value={i}>Matchday {m.round}</option>
+          ))}
+        </select>
+        <button
+          className="btn btn-outline"
+          onClick={() => setRound((r) => Math.min(matchdays.length - 1, r + 1))}
+          disabled={round === matchdays.length - 1}
+        >Next →</button>
+      </div>
+      <div className={styles.matchList}>
+        {md?.matches.map((m, i) => (
+          <div key={i} className={styles.matchRow}>
+            <span style={{ fontWeight: m.result === 'H' ? 700 : 400, textAlign: 'right', flex: 1 }}>{m.home_team}</span>
+            <span className={styles.matchScore}>{m.home_goals} – {m.away_goals}</span>
+            <span style={{ fontWeight: m.result === 'A' ? 700 : 400, flex: 1 }}>{m.away_team}</span>
+            <span className={RESULT_CLASS[m.result]}>{RESULT_LABEL[m.result]}</span>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
@@ -196,6 +242,7 @@ function Forecasts({ items }) {
             <div>
               <span className={styles.tagSeason}>{f.season}</span>
               <span className={styles.tagMuted}>{(f.runs ?? 0).toLocaleString()} runs</span>
+              {f.teams?.length > 0 && <span className={styles.tagMuted}>{f.teams.length} teams</span>}
               <span className={styles.champion}>⭐ {f.favourite}</span>
             </div>
             <button
@@ -211,18 +258,25 @@ function Forecasts({ items }) {
             <div className="table-wrapper" style={{ marginTop: '.8rem' }}>
               <table>
                 <thead>
-                  <tr><th>Team</th><th>Titles</th><th>Top 4</th><th>Relegations</th><th>Avg Pts</th></tr>
+                  <tr>
+                    <th>Team</th><th>Title%</th><th>Top 4%</th><th>Top 10%</th>
+                    <th>Releg%</th><th>Avg Pts</th><th>Avg Pos</th><th>Best</th><th>Worst</th>
+                  </tr>
                 </thead>
                 <tbody>
                   {[...f.table]
-                    .sort((a, b) => (b.title_count ?? 0) - (a.title_count ?? 0))
+                    .sort((a, b) => (b.title_pct ?? 0) - (a.title_pct ?? 0))
                     .map((r) => (
                       <tr key={r.team}>
                         <td style={{ fontWeight: 500 }}>{r.team}</td>
-                        <td>{r.title_count}</td>
-                        <td>{r.top4_count}</td>
-                        <td>{r.releg_count}</td>
+                        <td>{r.title_pct ?? r.title_count}%</td>
+                        <td>{r.top4_pct ?? r.top4_count}%</td>
+                        <td>{r.top10_pct != null ? `${r.top10_pct}%` : '—'}</td>
+                        <td>{r.releg_pct ?? r.releg_count}%</td>
                         <td>{r.avg_points}</td>
+                        <td>{r.avg_position ?? '—'}</td>
+                        <td>{r.best_position ?? '—'}</td>
+                        <td>{r.worst_position ?? '—'}</td>
                       </tr>
                     ))}
                 </tbody>

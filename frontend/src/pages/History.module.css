@@ -121,3 +121,32 @@
   margin-bottom: 1rem;
   font-size: .9rem;
 }
+
+.roundNav {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .8rem;
+  flex-wrap: wrap;
+}
+
+.matchList {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.matchRow {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .5rem .7rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+}
+.matchScore {
+  font-weight: 700;
+  min-width: 3.2rem;
+  text-align: center;
+}
